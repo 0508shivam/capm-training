@@ -1,0 +1,74 @@
+###GET Employees
+GET http://localhost:4004/emp-directory/Employee
+Content-Type: application/json
+Authorization: Basic Admin:
+
+###POST Employee
+POST http://localhost:4004/emp-directory/Employee
+Content-Type: application/json
+Authorization: Basic Admin:
+
+{
+    "firstName": "John",
+    "lastName": "Wick",
+    "jobTitle": "SLM Developer",
+    "department": "Technology & Development",
+    "email": "john.wick@example.com",
+    "phone": "(123) 456-7890",
+    "location": "New York",
+    "isManager": true,
+    "status_code": true,
+    "project_ID": "619549ca-ff54-4090-b74b-e5205404f4bd"
+}
+
+###PUT data to Employee
+PUT http://localhost:4004/emp-directory/Employee('48aee174-d832-4abd-a0b6-3c4b63148977')
+Content-Type: application/json
+Authorization: Basic Admin:
+
+{
+    "firstName": "John",
+    "lastName": "Wick",
+    "jobTitle": "Senior Software Engineer",
+    "department": "Technology & Development",
+    "email": "john.wick@example.com",
+    "phone": "(123) 456-7890",
+    "location": "New York",
+    "isManager": true,
+    "status_code": true,
+    "project_ID": "619549ca-ff54-4090-b74b-e5205404f4bd"
+}
+
+###PATCH data to Employee
+PATCH http://localhost:4004/emp-directory/Employee('48aee174-d832-4abd-a0b6-3c4b63148977')
+Content-Type: application/json
+Authorization: Basic Admin:
+
+{
+    "jobTitle": "Solution Architect"
+}
+
+###DELETE Employee
+DELETE http://localhost:4004/emp-directory/Employee('48aee174-d832-4abd-a0b6-3c4b63148977')
+Content-Type: application/json
+Authorization: Basic Admin:
+
+
+###Performing action separateEmployee
+POST http://localhost:4004/emp-directory/separateEmployee
+Content-Type: application/json
+Authorization: Basic Admin:
+
+{
+    "employeeID": "52858759-85ed-4bd7-8c86-ba9e82ac7c"
+}
+
+###Invoking getProjectDetails Function 
+GET http://localhost:4004/emp-directory/getProjectDetails
+Content-Type: application/json
+Authorization: Basic Admin:
+
+{
+    "projectID": "22523287-e923-4f7c-9094-3254059e57b9"
+}
+
