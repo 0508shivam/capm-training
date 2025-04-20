@@ -16,9 +16,9 @@ service EmployeeDirectory @(path: '/emp-directory') {
     //     m.status
     // } where m.isManager = true;
 
-    // entity Managers @cds.redirection.target as select from db.Employee as m {
-    //     *
-    // } where m.isManager = true;
+    entity Managers @cds.redirection.target as select from db.Employee as m {
+        *
+    } where m.isManager = true;
     
     action separateEmployee(employeeID: UUID) returns String;
     function getProjectDetails(projectID: UUID) returns array of Project;
